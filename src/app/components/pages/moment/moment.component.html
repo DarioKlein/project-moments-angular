@@ -1,0 +1,6 @@
+<div class="container-moment" *ngIf="moment">
+  <h2>{{ moment.title }}</h2>
+  <p>{{ moment.description }}</p>
+  <p>Publicado em: {{ moment.created_at }}</p>
+  <p><a routerLink="/moments">Voltar</a></p>
+</div>

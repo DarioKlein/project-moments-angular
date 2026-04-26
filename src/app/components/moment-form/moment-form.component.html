@@ -1,0 +1,40 @@
+<form (ngSubmit)="submit()" [formGroup]="momentForm">
+  <fieldset>
+    <label for="title">Título:</label>
+    <input
+      type="text"
+      id="title"
+      placeholder="Coloque um título"
+      formControlName="title"
+      required
+    />
+    <div *ngIf="title.invalid && submitted" class="validation-error">
+      <p *ngIf="title.errors?.['required']">O título é obrigatório!</p>
+      <p *ngIf="title.errors?.['maxlength']">O título é grande demais!</p>
+      <p *ngIf="title.errors?.['minlength']">O título é pequeno demais!</p>
+    </div>
+  </fieldset>
+  <fieldset>
+    <label for="description">Descrição:</label>
+    <textarea
+      id="description"
+      placeholder="O que aconteceu lá?"
+      formControlName="description"
+      required
+    ></textarea>
+    <div *ngIf="description.invalid && submitted" class="validation-error">
+      <p *ngIf="description.errors?.['required']">A descrição é obrigatória!</p>
+      <p *ngIf="description.errors?.['maxlength']">
+        A descrição é grande demais!
+      </p>
+    </div>
+  </fieldset>
+  <fieldset>
+    <label for="file-image">Coloque a foto que mais marcou:</label>
+    <div class="button-choose-image">
+      <mat-icon class="image-button"> image </mat-icon>
+      <input type="file" id="file-image" (change)="onFileSelected($event)" />
+    </div>
+  </fieldset>
+  <button>{{ btnText }}</button>
+</form>

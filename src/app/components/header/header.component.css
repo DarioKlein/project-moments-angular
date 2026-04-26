@@ -1,0 +1,48 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  border-bottom: 0.1rem solid #dec129;
+  background-color: #EBEEF3;
+}
+
+.brand {
+  gap: 2rem;
+}
+
+.brand > img {
+  width: 4rem;
+}
+
+.brand,
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand > h2 {
+  transition: all .4s;
+  font-size: 2.3rem;
+}
+
+.brand:hover > h2 {
+  color: #dec129;
+}
+
+.links {
+  gap: 5rem;
+}
+
+.links > li {
+  font-size: 1.7rem;
+  list-style: none;
+}
+
+.active {
+  color: #dec129;
+}
+
+.active:hover {
+  filter: brightness(0.7);
+}

@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria;
+  color: #444;
+}
+
+button,
+input {
+  font-family: Cambria;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+  transition: 0.4s;
+}
+
+a:hover {
+  color: #dec129;
+}
+
+form {
+  width: 45rem;
+  font-size: 1.6rem;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+fieldset:nth-child(1) > input {
+  padding: 0 0.6rem;
+  min-height: 3rem;
+}
+
+textarea {
+  resize: none;
+  min-height: 7rem;
+  padding: 0.6rem;
+}
+
+input[type="file"] {
+  width: 12rem;
+  height: 3rem;
+}
+
+input[type="file"]::before {
+  content: "Adicione sua imagem";
+  position: absolute;
+  width: 19rem;
+  height: 3rem;
+  background-color: #fff;
+  border: 0.1rem solid #777;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+form > button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #444;
+  border: none;
+  color: #fff;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.6rem;
+}
+
+form > button:hover {
+  background-color: #dec129;
+  color: #444;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,58 @@
+.message {
+  position: fixed;
+  top: 3rem;
+  width: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: #fff;
+  border: 0.3rem solid #dec129;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  animation: messageAnimation 3s ease-in-out forwards;
+}
+
+@keyframes messageAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.message-header button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.icon-close {
+  font-size: 2.25rem;
+}
+
+.message p {
+  font-size: 1.7rem;
+}

@@ -1,0 +1,106 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 4rem;
+  gap: 1rem;
+}
+
+.home-container h1 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.moments-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.moment {
+  width: 32%;
+  text-align: center;
+}
+
+.moment img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.moment h2 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+.moment h3,
+.moment p {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.moment .date {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.moment a {
+  color: #dec129;
+  text-decoration: none;
+  padding: 3rem 6rem;
+}
+
+
+.moment a:hover {
+  color: #777;
+  text-decoration: none;
+  padding: 3rem 6rem;
+}
+
+.search-container {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container form {
+  width: 24%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-container fa-icon {
+  position: absolute;
+  margin-left: 1rem;
+}
+
+.search-container input {
+  padding: 0.8rem 2rem;
+  width: 100%;
+  text-align: center;
+  border: 0.1rem solid #000;
+  border-radius: 0.5rem;
+}
+
+.search-container input:focus {
+  outline: none;
+  border: 0.1rem solid #dec129;
+}
+
+.no-moments {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin-top: 3rem;
+  text-decoration: underline;
+}
+
+.no-moments:hover {
+  color: #dec129;
+}

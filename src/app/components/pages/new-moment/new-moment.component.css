@@ -1,0 +1,28 @@
+section {
+  width: 100%;
+  height: calc(100vh - 61px - 94px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div {
+  width: 65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border: 0.1rem solid #dec129;
+  padding: 6rem 0;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #ebeef3;
+}
+
+h2 {
+  font-size: 3.3rem;
+}
+
+span {
+  color: #dec129;
+}
