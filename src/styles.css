@@ -38,7 +38,7 @@ fieldset {
   margin-bottom: 1rem;
 }
 
-fieldset:nth-child(1) > input {
+fieldset:nth-child(2) > input {
   padding: 0 0.6rem;
   min-height: 3rem;
 }
@@ -49,13 +49,13 @@ textarea {
   padding: 0.6rem;
 }
 
-input[type="file"] {
+input[type='file'] {
   width: 12rem;
   height: 3rem;
 }
 
-input[type="file"]::before {
-  content: "Adicione sua imagem";
+input[type='file']::before {
+  content: 'Adicione sua imagem';
   position: absolute;
   width: 19rem;
   height: 3rem;
@@ -92,5 +92,45 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.edit-btn,
+.remove-btn {
+  border: 0.1rem solid #efefef;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+button fa-icon,
+a fa-icon {
+  margin-right: 0.2rem;
+}
+
+.edit-btn,
+.edit-btn path {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.edit-btn:hover,
+.edit-btn:hover path {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.remove-btn,
+.remove-btn path {
+  border-color: red;
+  color: red;
+}
+
+.remove-btn:hover,
+.remove-btn:hover path {
+  color: #fff;
+  background-color: red;
 }
