@@ -61,11 +61,12 @@ img {
 }
 
 .comment-form {
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 
 .comment-form h3 {
   text-align: left;
+  font-size: 2rem;
 }
 
 .comment-form form {

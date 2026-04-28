@@ -1,8 +1,8 @@
 export interface Comment {
-  id?: string,
-  text: string,
-  username: string,
-  momentId: string,
-  createdAt?: string,
+  id?: number
+  text: string
+  username: string
+  momentId: number
+  createdAt?: string
   updatedAt?: string
 }

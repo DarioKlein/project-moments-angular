@@ -23,49 +23,55 @@
         moment.comments!.length > 0 ? moment.comments!.length : '0'
       }}):
     </h3>
-    <!-- <div *ngIf="moment.comments!.length > 0; else noComments"> -->
-    <div>
+    <div *ngIf="moment.comments!.length > 0; else noComments">
       <div class="comment-container" *ngFor="let comment of moment.comments">
         <p class="comment">{{ comment.text }}</p>
         <p class="author"><span>por: </span> {{ comment.username }}</p>
-      </div>
-      <div class="comment-container">
-        <p class="comment">Texto do comentário</p>
-        <p class="author"><span>por: </span>Dário</p>
       </div>
     </div>
     <ng-template #noComments>
       <p>Não há comentários</p>
     </ng-template>
-    <ul>
-      <li *ngFor="let comment of moment.comments">
-        <b>{{ comment.username }}:</b> {{ comment.text }}
-      </li>
-    </ul>
-  </div>
-  <div class="comment-form">
-    <h3>Deixe seu comentário:</h3>
-    <form>
-      <fieldset>
-        <label for="text">Comentário:</label>
-        <textarea
-          id="text"
-          placeholder="Digite seu comentário"
-          name="text"
-          required
-        ></textarea>
-      </fieldset>
-      <fieldset>
-        <label for="username">Nome:</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Digite o seu nome"
-          required
-        />
-      </fieldset>
-      <button>Comentar</button>
-    </form>
+    <div class="comment-form">
+      <h3>Deixe seu comentário:</h3>
+      <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+          <label for="text">Comentário:</label>
+          <textarea
+            id="text"
+            placeholder="Digite seu comentário"
+            name="text"
+            formControlName="text"
+            required
+          ></textarea>
+          <div *ngIf="text.invalid && submitted" class="validation-error">
+            <p *ngIf="text.errors?.['required']">O comentário é obrigatório!</p>
+            <p *ngIf="text.errors?.['maxlength']">
+              O comentário é grande demais!
+            </p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <label for="username">Nome:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            formControlName="username"
+            placeholder="Digite o seu nome"
+            required
+          />
+          <div *ngIf="username.invalid && submitted" class="validation-error">
+            <p *ngIf="username.errors?.['required']">
+              O nome de usuário é obrigatório!
+            </p>
+            <p *ngIf="username.errors?.['maxlength']">
+              O nome de usuário é grande demais!
+            </p>
+          </div>
+        </fieldset>
+        <button>Comentar</button>
+      </form>
+    </div>
   </div>
 </div>

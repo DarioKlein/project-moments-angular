@@ -11,10 +11,3 @@
   margin-top: 0.2rem;
   cursor: pointer;
 }
-
-.validation-error > p {
-  color: red;
-  border-left: 0.3rem solid red;
-  border-radius: 0.4rem;
-  padding-left: 0.6rem;
-}

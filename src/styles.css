@@ -134,3 +134,10 @@ a fa-icon {
   color: #fff;
   background-color: red;
 }
+
+.validation-error > p {
+  color: red;
+  border-left: 0.3rem solid red;
+  border-radius: 0.4rem;
+  padding-left: 0.6rem;
+}
